@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Creating Tab</title>
+  <title>Cloud File Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800|Source+Sans+Pro:200,300,400,600,700,900'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800|Source+Sans+Pro:200,300,400,600,700,900'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -16,136 +16,158 @@
 
 <body>
 
-  <div class="cm-main-wrapper">
-	<div class="cm-main-cms-navigation">
-		<div class="cm-main-cms-navigation-inner">
-			<ul>
-				<li><a href="#">Dashboard</a></li>
-				<li><a href="#">Content</a></li>
-				<li><a href="#">Management</a></li>
-			</ul>
-		</div>
+  <div class="user-data-area" clear>
+	<div class="cloud-server-name">Qbus Cloud</div>
+	<div class="login-cloud" modal-click="login">Login</div>
+	<div class="cloud-server-user"><i class="fas fa-user"></i><span class="user-option">Suryansh Srivastava<ul class="option">
+		<li>User</li>
+		<li>Setting</li>
+		<li>Logout</li>
+		</ul></span></div>
+</div>
+<div class="cm-address-bar-search" clear>
+	<div class="address-search">
+		<div class="pos"><input type="text" class="address-search-input"><div class="cm-button address-button"><i class="fas fa-arrow-right"></i></div><div class="address-short-btn"></div></div>
 	</div>
-	<div class="main-editing-area" clear>
-		<div class="cm-left-file-manager">
-			<div class="cm-box-top-menu">
-				<ul class="menu-option">
-					<li class="menu-sub-active show-up"><b>Menu</b></li>
-					<li><b>Create Project</b></li>
-					<li><b>Open Project</b>
-						<ul>
-							<li><b>Project 01</b></li>
-							<li><b>Project 02</b>
-								<li><b>Open Project Inner</b>
-									<ul>
-										<li><b>Project 01-02</b></li>
-										<li><b>Project 02-02</b></li>
-									</ul>
-								</li>
-						</ul>
-						</li>
-						<li><b>Project List</b></li>
-						<li><b>Staging Project List</b></li>
-				</ul>
-			</div>
-			<div class="cm-box-file-menu">
-				<div class="search-project-file">
-					<div class="search-project-file-inner" clear>
-						<label>Search</label>
-						<input type="text">
-						<div class="search-project-icon"><i class="fas fa-search"></i></div>
-					</div>
-				</div>
-				<div class="theme-structure big-file-manager">
-					<ul>
-						<li class="file-sub-active show-up"><b>Project 01</b></li>
-						<li data-file-icon="folder"><b>Assets</b>
-							<ul>
-								<li data-file-icon="folder"><b>image</b>
-									<ul>
-										<li data-file-id="sdfsdfsdfsdf45456sd" data-file-path="https://www.w3schools.com/html/movie.mp4" data-file-icon="video"><b>movie.mp4</b></li>
-										<li data-file-id="sdfsdfsdf454" data-file-path="suryansh.jpg" data-file-icon="image"><b>cat.png</b></li>
-										<li data-file-id="sdf4334545" data-file-path="suryansh.jpg" data-file-icon="image"><b>banner.jpg</b></li>
-										<li data-file-id="sdfs4355" data-file-path="suryansh.jpg" data-file-icon="image"><b>user.gif</b></li>
-									</ul>
-								</li>
-								<li data-file-icon="folder"><b>fonts</b>
-									<ul>
-										<li data-file-icon="folder"><b>A-1</b></li>
-										<li data-file-icon="folder"><b>B-1</b></li>
-										<li data-file-icon="folder"><b>C-1</b>
-											<ul>
-												<li data-file-icon="folder"><b>A-2</b></li>
-												<li data-file-icon="folder"><b>B-2</b></li>
-												<li data-file-icon="folder"><b>C-2</b>
-													<ul>
-														<li data-file-icon="folder"><b>A-3</b></li>
-														<li data-file-icon="folder"><b>B-3</b></li>
-														<li data-file-icon="folder"><b>C-3</b></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li data-file-icon="folder"><b>files</b></li>
-								<li data-file-icon="folder"><b>random</b></li>
-							</ul>
-						</li>
-						<li data-file-icon="folder"><b>Pages</b>
-							<ul>
-								<li data-file-id="5" data-file-path="main.html" data-file-icon="file"><b>main.html</b></li>
-								<li data-file-id="6" data-file-path="error.html" data-file-icon="file"><b>error.html</b></li>
-								<li data-file-id="7" data-file-path="serach-result.html" data-file-icon="file"><b>serach-result.html</b></li>
-								<li data-file-id="8" data-file-path="extra.html" data-file-icon="file"><b>extra.html</b></li>
-							</ul>
-						</li>
-						<li data-file-icon="folder"><b>Layout</b>
-							<ul>
-								<li data-file-icon="layout"><b>Two Column Left Image</b></li>
-								<li data-file-icon="layout"><b>Three Column Equal</b></li>
-								<li data-file-icon="layout"><b>Two Column</b></li>
-								<li data-file-icon="layout"><b>Full Width</b></li>
-							</ul>
-						</li>
-						<li data-file-icon="folder"><b>File 04</b></li>
-					</ul>
-					<div class="cm-properties-popup-section">
-						<div class="cm-properties-popup-inner-section">
-							<div class="cm-properties-close"><i class="fas fa-times"></i></div>
-							<div class="cm-properties-section">
-								<div class="data-name"></div>
-								<div class="data-type"></div>
-								<div class="data-size"></div>
-								<div class="data-links"></div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		<div class="cm-tabber-input-area">
-			<div class="cm-tab-wrapper">
-				<div class="cm-tab-menu" clear>
-					<div class="cm-tab-buttom-wrapper" clear>
-						<ul clear>
-
-						</ul>
-					</div>
-				</div>
-				<div class="cm-tab-content" clear>
-
-				</div>
-			</div>
+	<div class="search-file-and-folder">
+		<div class="pos"><input placeholder="Search.." type="text" class="files-search-input"><div class="cm-button file-search-button"><i class="fas fa-search"></i></div></div>
+	</div>
+	<div class="uploads-folder-files">
+		<div class="upload-btn-wrapper">
+			<button class="upload" modal-click="upload-form"><i class="fas fa-circle-notch"></i><i class="fas fa-cloud-upload-alt"></i>Upload</button>
 		</div>
 	</div>
 </div>
+<div class="cloud-manager">
+	<ul>
+		<li data-type="project">Project Name
+			<ul>
+				<li data-type="cloud">Cloud
+					<ul>
+						<li data-type="folder">Folder 2-1</li>
+						<li data-type="folder">Folder 2-2</li>
+						<li data-type="folder">Folder 2-3
+							<ul>
+								<li data-type="folder">Folder 3-1</li>
+								<li data-type="folder">Folder 3-2
+									<ul>
+										<li data-type="html">index.html</li>
+										<li data-type="js">index.js</li>
+										<li data-type="css">style.css</li>
+										<li data-type="image">suryansh.jpg</li>
+									</ul>
+								</li>
+								<li data-type="folder">Folder 3-3</li>
+								<li data-type="folder">Folder 3-4
+									<ul>
+										<li data-type="html">index.html</li>
+										<li data-type="js">index.js</li>
+										<li data-type="css">style.css</li>
+										<li data-type="folder">Blank</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li data-type="folder">Folder 2-4</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="modals-overlay"></div>
+<div class="cm-model-wrapper">
+<div class="cm-project-modal" modal-data="login">
+	<div class="cm-project-modal-header">
+		<label>Login Your Cloud</label>
+	</div>
+	<div class="cm-project-setting-inner-wrapper">
+		<div class="cm-form-wrapper">
+			<label>Email or Username<i>*</i></label>
+			<input type="text" name="username">
+		</div>
+		<div class="cm-form-wrapper">
+			<label>Password<i>*</i></label>
+			<input type="text" name="password">
+		</div>
+		<div class="cm-form-wrapper">
+			<label>Storage Type<i>*</i></label>
+			<select name="menu-type">
+				<option>Select</option>
+				<option>Cloud</option>
+				<option>FTP</option>
+				<option>Network-attached storage</option>
+			</select>
+		</div>
+		<div class="cm-advanced-setting">
+			<div class="advanced setting-inner" clear><span class="more-setting">Advanced Setting</span><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+			<div class="cm-adv-form-wrapper">
+				<div class="cm-form-wrapper">
+					<label>More login Credential<span>For CORS Authentication</span></label>
+					<textarea name="website-header"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cm-project-modal-footer">
+		<div><span class="disclaimer">* Important to input</span></div>
+		<div class="form-action-box">
+			<button class="data-scan-directory btn-def">Scan Directory</button>
+			<button class="data-file-save btn-def" model-close>Save</button>
+		</div>
+	</div>
+</div>
+	<div class="cm-project-modal" modal-data="upload-form">
+	<div class="cm-project-modal-header">
+		<label>File Upload</label>
+	</div>
+	<div class="cm-project-setting-inner-wrapper">
+		<div class="file-input-box" clear>
+			<div class="files"><input id="files-select" multiple type="file"/><i class="fas fa-file"></i><span>Select Files</span></div>
+			<div class="folder"><input id="folder-select" multiple type="file" webkitdirectory mozdirectory /><i class="fas fa-folder"></i><span>Select Folder</span></div>
+		</div>
+		<div class="cm-advanced-setting">
+			<div class="advanced setting-inner" clear><span class="more-setting">Files Status</span><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+			<div class="cm-adv-form-wrapper">
+				<div class="uploading-files-status">
+					<div class="loading-bar">
+						<div class="loading-bar-outer">
+							<div class="loading-bar-inner">
+								<span class="bar"></span>
+								<span class="bar-text">34%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="upload-to"><b>Upload To:</b><span class="upload-to-text"></span></div>
+				<div class="preview-files-or-folder">
+					<table>
+						<thead>
+							<th>File</th>
+							<th>File Name</th>
+							<th>Loading</th>
+							<th>File Size</th>
+							<th>Delete</th>
+						</thead>
+						<tbody id="append-files">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cm-project-modal-footer">
+		<div><span class="disclaimer">* Click To Chose</span></div>
+		<div class="form-action-box">
+			<button class="data-file-upload btn-def" model-close>Upload</button>
+		</div>
+	</div>
+</div>
+	</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-<script src='https://nathancahill.github.io/Split.js/split.js'></script>
 <script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
-<script src='https://ace.c9.io/build/src-min-noconflict/ace.js'></script>
 
   
 
