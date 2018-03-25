@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Creating Tab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu V2</title>
   
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800|Source+Sans+Pro:200,300,400,600,700,900'>
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -16,136 +17,89 @@
 
 <body>
 
-  <div class="cm-main-wrapper">
-	<div class="cm-main-cms-navigation">
-		<div class="cm-main-cms-navigation-inner">
+  <div class="nav-app-option">
+	<ul>
+		<li class="code"><i class="fa fa-code" aria-hidden="true"></i>Code</li>
+		<li class="menu-prev">Menu Preview</li>
+	</ul>
+</div>
+<div class="edit-menu-wrap" clear>
+	<div class="cm-all-menu-items">
+		<div class="cm-project-list">
 			<ul>
-				<li><a href="#">Dashboard</a></li>
-				<li><a href="#">Content</a></li>
-				<li><a href="#">Management</a></li>
+				<li><div class="cm-proj-mane"><a href="#a"><i class="fa fa-cube" aria-hidden="true"></i>Qbus OS Menu</a></div><div class="cm-proj-option"><div class="edit"><i class="fas fa-edit"></i></div><div class="delete"><i class="far fa-trash-alt"></i></div></div></li>
+				<li><div class="cm-proj-mane"><a href="#c"><i class="fa fa-cube" aria-hidden="true"></i>Qbus Website</a></div><div class="cm-proj-option"><div class="edit"><i class="fas fa-edit"></i></div><div class="delete"><i class="far fa-trash-alt"></i></div></div></li>
+				<li><div class="cm-proj-mane"><a href="#b"><i class="fa fa-cube" aria-hidden="true"></i>Qbus Menu</a></div><div class="cm-proj-option"><div class="edit"><i class="fas fa-edit"></i></div><div class="delete"><i class="far fa-trash-alt"></i></div></div></li>
 			</ul>
 		</div>
+		<div class="cm-file-menu-option">
+			<ul><li modal-click="add-website" class="cm-add-website" title="Add Project"><i class="fa fa-plus" aria-hidden="true"></i></li></ul>
+		</div>
 	</div>
-	<div class="main-editing-area" clear>
-		<div class="cm-left-file-manager">
-			<div class="cm-box-top-menu">
-				<ul class="menu-option">
-					<li class="menu-sub-active show-up"><b>Menu</b></li>
-					<li><b>Create Project</b></li>
-					<li><b>Open Project</b>
-						<ul>
-							<li><b>Project 01</b></li>
-							<li><b>Project 02</b>
-								<li><b>Open Project Inner</b>
-									<ul>
-										<li><b>Project 01-02</b></li>
-										<li><b>Project 02-02</b></li>
-									</ul>
-								</li>
-						</ul>
-						</li>
-						<li><b>Project List</b></li>
-						<li><b>Staging Project List</b></li>
-				</ul>
+	<div class="cm-all-dynamic-data">
+		<div class="cm-dynamic-data">
+		<ul id="sortable">
+		</ul>
 			</div>
-			<div class="cm-box-file-menu">
-				<div class="search-project-file">
-					<div class="search-project-file-inner" clear>
-						<label>Search</label>
-						<input type="text">
-						<div class="search-project-icon"><i class="fas fa-search"></i></div>
-					</div>
-				</div>
-				<div class="theme-structure big-file-manager">
-					<ul>
-						<li class="file-sub-active show-up"><b>Project 01</b></li>
-						<li data-file-icon="folder"><b>Assets</b>
-							<ul>
-								<li data-file-icon="folder"><b>image</b>
-									<ul>
-										<li data-file-id="sdfsdfsdfsdf45456sd" data-file-path="https://www.w3schools.com/html/movie.mp4" data-file-icon="video"><b>movie.mp4</b></li>
-										<li data-file-id="sdfsdfsdf454" data-file-path="suryansh.jpg" data-file-icon="image"><b>cat.png</b></li>
-										<li data-file-id="sdf4334545" data-file-path="suryansh.jpg" data-file-icon="image"><b>banner.jpg</b></li>
-										<li data-file-id="sdfs4355" data-file-path="suryansh.jpg" data-file-icon="image"><b>user.gif</b></li>
-									</ul>
-								</li>
-								<li data-file-icon="folder"><b>fonts</b>
-									<ul>
-										<li data-file-icon="folder"><b>A-1</b></li>
-										<li data-file-icon="folder"><b>B-1</b></li>
-										<li data-file-icon="folder"><b>C-1</b>
-											<ul>
-												<li data-file-icon="folder"><b>A-2</b></li>
-												<li data-file-icon="folder"><b>B-2</b></li>
-												<li data-file-icon="folder"><b>C-2</b>
-													<ul>
-														<li data-file-icon="folder"><b>A-3</b></li>
-														<li data-file-icon="folder"><b>B-3</b></li>
-														<li data-file-icon="folder"><b>C-3</b></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li data-file-icon="folder"><b>files</b></li>
-								<li data-file-icon="folder"><b>random</b></li>
-							</ul>
-						</li>
-						<li data-file-icon="folder"><b>Pages</b>
-							<ul>
-								<li data-file-id="5" data-file-path="main.html" data-file-icon="file"><b>main.html</b></li>
-								<li data-file-id="6" data-file-path="error.html" data-file-icon="file"><b>error.html</b></li>
-								<li data-file-id="7" data-file-path="serach-result.html" data-file-icon="file"><b>serach-result.html</b></li>
-								<li data-file-id="8" data-file-path="extra.html" data-file-icon="file"><b>extra.html</b></li>
-							</ul>
-						</li>
-						<li data-file-icon="folder"><b>Layout</b>
-							<ul>
-								<li data-file-icon="layout"><b>Two Column Left Image</b></li>
-								<li data-file-icon="layout"><b>Three Column Equal</b></li>
-								<li data-file-icon="layout"><b>Two Column</b></li>
-								<li data-file-icon="layout"><b>Full Width</b></li>
-							</ul>
-						</li>
-						<li data-file-icon="folder"><b>File 04</b></li>
-					</ul>
-					<div class="cm-properties-popup-section">
-						<div class="cm-properties-popup-inner-section">
-							<div class="cm-properties-close"><i class="fas fa-times"></i></div>
-							<div class="cm-properties-section">
-								<div class="data-name"></div>
-								<div class="data-type"></div>
-								<div class="data-size"></div>
-								<div class="data-links"></div>
-							</div>
-						</div>
-					</div>
-					
+		<button class="add btn-def">Add</button>
+	</div>
+</div>
+
+
+<div class="editor-wrapper">
+	<h2><i class="fa fa-database" aria-hidden="true"></i>Into Your Database<span><i class="fa fa-times" aria-hidden="true"></i></span></h2>
+	<div id="editor"></div>
+</div>
+<div class="cm-menu-wrapper">
+	<close><i class="fa fa-times" aria-hidden="true"></i></close>
+	<menu></menu>
+</div>
+
+
+<div class="modals-overlay"></div>
+<div class="cm-model-wrapper">
+<div class="cm-project-modal" modal-data="add-website">
+	<div class="cm-project-modal-header">
+		<label>Create New Bucket</label>
+	</div>
+	<div class="cm-project-setting-inner-wrapper">
+		<div class="cm-form-wrapper">
+			<label>Website Title<i>*</i></label>
+			<input type="text" name="website-name">
+		</div>
+		<div class="cm-form-wrapper">
+			<label>Website URL<i>*</i></label>
+			<input type="text" name="website-url">
+		</div>
+		<div class="cm-form-wrapper">
+			<label>Menu Type<i>*</i></label>
+			<select name="menu-type">
+				<option>Navigation</option>
+				<option>Context Menu</option>
+			</select>
+		</div>
+		<div class="cm-advanced-setting">
+			<div class="advanced setting-inner" clear><span class="more-setting">Advanced Setting</span><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+			<div class="cm-adv-form-wrapper">
+				<div class="cm-form-wrapper">
+					<label>Website Header Data<span>For CORS Authentication</span></label>
+					<textarea name="website-header"></textarea>
 				</div>
 			</div>
 		</div>
-		<div class="cm-tabber-input-area">
-			<div class="cm-tab-wrapper">
-				<div class="cm-tab-menu" clear>
-					<div class="cm-tab-buttom-wrapper" clear>
-						<ul clear>
-
-						</ul>
-					</div>
-				</div>
-				<div class="cm-tab-content" clear>
-
-				</div>
-			</div>
+	</div>
+	<div class="cm-project-modal-footer">
+		<div><span class="disclaimer">* Important to input</span></div>
+		<div class="form-action-box">
+			<button class="data-file-save btn-def" model-close>Save</button>
 		</div>
 	</div>
 </div>
+	</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-<script src='https://nathancahill.github.io/Split.js/split.js'></script>
-<script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
 <script src='https://ace.c9.io/build/src-min-noconflict/ace.js'></script>
+<script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
 
   
 
