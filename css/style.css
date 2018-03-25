@@ -1,0 +1,654 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	font-family: 'Lato', sans-serif;
+	color:#333;
+	font-size:14px;
+	line-height:1.2;
+	margin:0;
+}
+[clear]:before,[clear]:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.cm-tab-buttom-wrapper> ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+	border-bottom: 1px solid #9c9c9c;
+	height: 40px;
+	overflow: hidden;
+	width:100000000000000000px;
+	position: relative;
+}
+.cm-tab-menu > div {
+    float: left;
+}
+.cm-tab-buttom-wrapper {
+	background: #9c9c9c;
+	width: calc(100% - 55px);
+	overflow: hidden;
+}
+.cm-tab-buttom-wrapper > ul > li {
+    float: left;
+	border-bottom: 3px solid #9c9c9c;
+	position: relative;
+	width:200px;
+}
+.cm-tab-buttom-wrapper > ul > li > a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #999C9F;
+    cursor: pointer;
+    background: #343A40;
+    border-left: 1px solid #000;
+    padding: 10px 50px 10px 10px;
+    position: relative;
+}
+.cm-tab-buttom-wrapper > ul > li:first-child > a {
+    border: 0;
+}
+.cm-box-top-menu ul {
+    padding: 0;
+    list-style: none;
+}
+.cm-tab-content > div {
+    height:100%;
+    width: 100%;
+}
+.cm-tab-content > div:not(.open-tab) {
+    display: none;
+}
+.cm-tab-content > div > [data-editor] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.tab-inside-video {
+    text-align: center;
+    padding: 10px;
+}
+.cm-tab-buttom-wrapper > ul > li.active-tab {
+    border-color: #ffffff;
+}
+.tab-scroll {
+    width: 55px;
+    background: #4a4a4a;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-bottom: 4px solid #2196F3;
+    background-color: #0288d1;
+    background-image: linear-gradient(to bottom, #0288d1, #2eabef);
+    box-shadow: inset 0px 1px 0px rgb(2, 136, 209);
+}
+.tab-plus {
+    width: 55px;
+    display: block;
+    line-height: 36px;
+    text-align: center;
+    background: #343a40;
+    color: #fff;
+    border-bottom: 4px solid #2196f3;
+    cursor: pointer;
+}
+.tab-close {
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    width: 40px;
+    display: block;
+    text-align: center;
+    opacity: 0.8;
+    cursor: pointer;
+	color: #fff;
+}
+.cm-tab-buttom-wrapper > ul > li > a span.tab-loading {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    cursor: wait;
+    transition: all 0.3s linear;
+	visibility:hidden;
+}
+.rippling {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  opacity: .2;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  will-change: width, height;
+}
+.cm-tab-buttom-wrapper > ul > li > a svg {
+    margin-right: 5px;
+    font-size: 15px;
+}
+.cm-tab-buttom-wrapper > ul > li.active-tab > a, .cm-tab-buttom-wrapper > ul > li.active-tab > a > svg {
+    color: #fff;
+}
+.create-form-box {
+    padding: 10px;
+    border-bottom: 1px solid #9c9c9c;
+}
+.create-form-box {
+    padding: 10px;
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.create-form-box input,.create-form-box select {
+    padding: 2px;
+    margin-right: 5px;
+    outline: 0;
+}
+
+.create-form-box input {
+    width: 100%;
+    max-width: 300px;
+}
+
+.create-form-box button {
+    background: #343a40;
+    color: #fff;
+    border: 0;
+    padding: 4px 10px;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+    height: 23px;
+}
+
+.create-form-box button:active {
+    top: 1px;
+}
+.create-form-box label {
+    font-weight: bold;
+    padding-right: 10px;
+}
+@media(max-width:540px){
+	.cm-tab-buttom-wrapper {
+		width: calc(100% - 55px) !important;
+		overflow-x: auto;
+	}
+	.cm-tab-buttom-wrapper > ul{
+		overflow-x: auto;
+	}
+	.tab-scroll {
+		display: none;
+	}
+	.cm-tab-menu {
+		height: 40px;
+		overflow: hidden;
+	}
+}
+
+
+
+
+
+
+
+
+ .split {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .content {
+    border: 1px solid #C0C0C0;
+    box-shadow: inset 0 1px 2px #e4e4e4;
+    background-color: #fff;
+  }
+
+.gutter {
+    background-color: #343a40;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block !important;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.4);
+	width:20px !important;
+}
+  .gutter.gutter-horizontal {
+    cursor: col-resize;
+    background-image: url('https://nathancahill.github.io/Split.js/grips/vertical.png');
+  }
+
+  .gutter.gutter-vertical {
+    cursor: row-resize;
+    background-image: url('https://nathancahill.github.io/Split.js/grips/horizontal.png');
+    
+  }
+
+  .split.split-horizontal, .gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+  }
+
+.cm-tab-content > [data-tab-content]{
+	float: left;
+	width: auto;
+	overflow: hidden;
+	position: relative;
+}
+.cm-tab-content {
+    height:calc(100vh - 40px);
+}
+.gutter + .gutter{
+	display:none !important;
+}
+.cm-tab-buttom-wrapper > ul > li.active-tab.focus-active > a {
+    background: #20a0e6;
+}
+/*--------------Normal Page Style-------------*/
+.cm-main-cms-navigation {
+    height: 40px;
+}
+.main-editing-area {
+    height: calc(100vh - 40px);
+    position: relative;
+    top: 0;
+}
+.cm-main-wrapper {
+    height: 100vh;
+    overflow: hidden;
+}
+.cm-main-cms-navigation {
+    background: #343a40;
+    box-shadow: 0 0 4px #343a409e;
+    border-bottom: 1px solid #000;
+}
+
+.cm-main-cms-navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+}
+
+.cm-main-cms-navigation ul li {
+    display: inline-block;
+}
+
+.cm-main-cms-navigation ul li a {
+    padding: 12px 10px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+}
+.cm-main-cms-navigation ul li a:hover {
+    background: #2196F3;
+}
+.cm-main-wrapper {
+    height: 100vh;
+    overflow: hidden;
+}
+.cm-left-file-manager {
+    width: 360px;
+    float: left;
+    height: calc(100vh - 40px);
+    border-right: 1px solid #000000;
+}
+.cm-tabber-input-area {
+    float: right;
+    width: calc(100% - 360px);
+}
+.menu-option {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.menu-option li {
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.menu-option .menu-sub-active > b {
+	text-align: center;
+    overflow: hidden;
+    background: #343a40;
+    font-size: 13px;
+    color: #fff;
+}
+.menu-option li b {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+.cm-menu-back {
+    display: none;
+}
+.menu-option .hassub.menu-sub-active b > .cm-menu-back {
+    display: inline-block;
+    font-style: normal;
+    color: #acacac;
+    float: left;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.menu-option li.hassub.menu-sub-active > b > i {
+    display: block !important;
+}
+.menu-option ul:not(.active) {
+    display: none;
+}
+.cm-box-top-menu {
+    height: 300px;
+    border-bottom: 1px solid #000;
+}
+.cm-box-file-menu {
+    height: calc(100% - 300px);
+    overflow: hidden;
+	position: relative;
+}
+.menu-option li.hassub.menu-sub-active > b > i svg {
+    margin-right: 10px;
+}
+ .menu-option .hassub.menu-sub-active > b > svg {
+     display: none;
+}
+.menu-option li b > svg {
+    float: right;
+    position: relative;
+    top: 3px;
+}
+.search-project-file {
+    padding: 10px;
+}
+.search-project-file input[type="text"] {
+    width: calc(100% - 62px);
+    float: right;
+    height: 36px;
+    border: 1px solid #343a40;
+    padding: 5px 10px;
+    outline: 0;
+    padding-right: 35px;
+}
+.search-project-file label {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+    width: 62px;
+    height: 36px;
+    background: #343a40;
+    cursor: pointer;
+    color: #fff;
+}
+.search-project-file-inner {
+    position: relative;
+}
+.search-project-icon {
+    position: absolute;
+    right: 1px;
+    padding: 9px;
+    cursor: pointer;
+    background: #fff;
+    top: 1px;
+    color: #b7b7b7;
+}
+.theme-structure ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+.theme-structure ul ul {
+    padding-left: 18px;
+}
+.theme-structure ul li {
+    display: block;
+    padding: 2px;
+    cursor: pointer;
+}
+.theme-structure ul li svg {
+    margin-right: 6px;
+}
+.theme-structure {
+    padding: 10px 10px;
+}
+.theme-structure ul li b {
+    font-size: 16px;
+    color: #5d656d;
+}
+.theme-structure ul ul {
+    display: none;
+}
+.arrow-nav-highlight {
+    display: inline-block;
+    margin-left: 7px;
+    position: relative;
+    top: 2px;
+    color: #c3c3c3;
+}
+.theme-structure ul li.has-child-data.open > b > .arrow-nav-highlight > svg {
+    transform: rotate(90deg);
+}
+.theme-structure ul > li > b:hover {
+    background: #343a4026;
+}
+.theme-structure ul > li > b {
+    display: block;
+	user-select:none;
+}
+.theme-structure {
+    padding: 10px 10px;
+    overflow: auto;
+    height: calc(100% - 56px);
+    width: calc(100% + 18px);
+}
+/*--------------Normal Page Style-------------*/
+/*-------Large File Manager-------*/
+.big-file-manager.theme-structure {
+    padding: 10px 10px;
+    overflow: auto;
+    height: calc(100% - 56px);
+    width: 100%;
+}
+.big-file-manager.theme-structure ul {
+    padding: 0;
+}
+.big-file-manager.theme-structure ul li {
+    padding: 0;
+}
+.big-file-manager.theme-structure ul > li > b {
+    text-align: center;
+    padding: 10px;
+    transform: scale(1);
+    transition: transform 0.1s linear;
+}
+.big-file-manager.theme-structure ul > li:not(.show-up) > b:active {
+    transform: scale(0.95);
+}
+.big-file-manager.theme-structure ul > li > b svg {
+    display: block;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.big-file-manager .cm-folder-back {
+    display: none;
+}
+.big-file-manager.theme-structure ul > li.show-up > b > .cm-folder-back {
+    display: block;
+}
+.big-file-manager.theme-structure ul > li.hide-up > b > .cm-folder-back {
+    display: none;
+}
+.big-file-manager.theme-structure ul li.file-sub-active.show-up {
+    display: block;
+}
+.big-file-manager.theme-structure ul > li > b .arrow-nav-highlight {
+    display: none;
+}
+.big-file-manager.theme-structure ul > li.show-up > b .cm-folder-back {
+    float: left;
+    font-size: 0;
+}
+.big-file-manager.theme-structure ul > li.show-up > b {
+    background: transparent;
+}
+.big-file-manager.theme-structure ul > li.show-up > b .cm-folder-back + svg {
+    display: none !important;
+}
+.big-file-manager.theme-structure ul > li.show-up > b .cm-folder-back svg {
+    font-size: 16px;
+}
+.big-file-manager.theme-structure ul > li.show-up > b .cm-folder-back {
+    padding: 0px 0 2px 0;
+}
+.big-file-manager.theme-structure ul > li > b {
+    width: 70px;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    padding: 10px 4px;
+}
+.big-file-manager.theme-structure ul > li.show-up > b {
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	padding: 0;
+}
+.big-file-manager.theme-structure ul > li.show-up > b {
+    background: transparent;
+    height: 20px;
+    line-height: 20px;
+}
+.big-file-manager.theme-structure ul li.file-sub-active.hide-up > b {
+    display: none;
+}
+.big-file-manager.theme-structure ul > li.show-up > b .cm-folder-back {
+    padding: 0 10px;
+    background: #00000012;
+}
+.big-file-manager.theme-structure ul > li > b i.cm-folder-back svg {
+    position: relative;
+    top: 3px;
+}
+.big-file-manager.theme-structure ul > li .no-item-inside-folder {
+    padding: 10px;
+    opacity: 0.6;
+    cursor: default;
+    user-select: none;
+}
+.theme-structure ul li[data-file-icon="folder"] > b > svg {
+    color: #F7D774;
+}
+[data-file-icon] .append-option-box {
+    position: fixed;
+    background: #fff;
+    border: 1px solid #b1b1b1;
+    box-shadow: 0 1px 1px #0000003d;
+    padding: 5px 0;
+    width: 200px;
+    top: 45px;
+    z-index: 999;
+    left: 57px;
+}
+[data-file-icon] .append-option-box>div {
+    padding: 2px 15px;
+}
+[data-file-icon] .append-option-box>div:hover {
+    background: #2196F3;
+    color: #fff;
+}
+.big-file-manager.theme-structure ul > li.context-visible > b, .big-file-manager.theme-structure ul > li.select > b {
+    background: #03a9f42e;
+    outline: 1px solid #03A9F4;
+}
+.big-file-manager.theme-structure ul li.file-sub-active.show-up.select > b {
+    background: transparent;
+    outline: none;
+}
+.big-file-manager.theme-structure ul > li.show-up > b {
+    margin-bottom: 10px;
+}
+.searching.theme-structure ul {
+    display: block !important;
+}
+.searching.theme-structure ul.no-item-inside-folder {
+    display: none !important;
+}
+.cm-properties-popup-section {
+    position: absolute;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.1s linear;
+    transform: scale(0);
+    top: 0;
+}
+.cm-properties-popup-section.open {
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+    background-color: #343a40d4;
+    transform: scale(1);
+}
+.cm-properties-close {
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.big-file-manager.theme-structure ul > li.data-moving > b{
+    opacity: 0.6;
+}
+.big-file-manager.theme-structure ul > li.data-moving.show-up > b {
+    opacity: 1;
+}
+.copied {
+    position: absolute;
+    bottom:-40px;
+    background: #20a0e6;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 6px;
+    color: #fff;
+    box-shadow: 0 0 2px #00000085;
+    visibility:hidden;
+	transition:bottom 0.1s linear;
+}
+.copied.copied-visible{
+	bottom:0;
+	visibility:visible;
+}
+.big-file-manager.theme-structure ul li:not(.show-up):not(.file-sub-active) {
+    display: inline-block;
+}
+/*-----------------------------------------------*/
